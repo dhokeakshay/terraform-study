@@ -27,3 +27,16 @@ resource "aws_s3_bucket_ownership_controls" "my_s3_bucket" {
   }
   bucket = var.s3_bucket
 }
+
+data "aws_instance" "wifi_server" {
+  instance_id = aws_instance.web_server.id
+}
+  filter {
+    name   = "ami-id"
+    values = ["ami-0b825ad86ddcfb907"]
+  }
+
+  filter {
+    name   = "tag:InstanceTag"
+    values = ["WifiUsed"]
+  }
