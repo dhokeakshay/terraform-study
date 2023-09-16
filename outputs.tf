@@ -1,6 +1,6 @@
 output "instance_id" {
   description = "ID of the EC2 instance"
-  values       =  aws_instance.web_server.id
+  value       =  aws_instance.web_server.id
 }
 
 output "instance_public_ip" {
@@ -9,5 +9,5 @@ output "instance_public_ip" {
 }
 
 output "ami_id" {
-  values = data.aws_ami.linux.id
+  value = data.aws_ami.linux.id
 }
