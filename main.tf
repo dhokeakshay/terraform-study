@@ -8,9 +8,9 @@ resource "aws_instance" "web_server" {
   }
 }
 
-resource "aws_s3_bucket" "my_s3_bucket" {
-  bucket = var.s3_bucket
-}
+#resource "aws_s3_bucket" "my_s3_bucket" {
+ # bucket = var.s3_bucket
+#}
 
 resource "aws_s3_bucket_public_access_block" "my_s3_bucket" {
   bucket                  = var.s3_bucket
