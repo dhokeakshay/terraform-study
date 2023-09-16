@@ -8,6 +8,3 @@ output "instance_public_ip" {
   values       = aws_instance.web_server.public_ip
 }
 
-output "ami_id" {
-  value = data.aws_ami.linux.id
-}
