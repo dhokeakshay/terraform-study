@@ -8,15 +8,15 @@ data "aws_ami" "linux" {
 
   filter{
     name = "AmiName"
-    value = ["al2023-ami-2023.1.20230912.0-kernel-6.1-x86_64"]
+    values = ["al2023-ami-2023.1.20230912.0-kernel-6.1-x86_64"]
   }
   filter{
     name = "root-device-type"
-    value = ["ebs"]
+    values = ["ebs"]
   }
   filter{
     name = "virtualization-type"
-    value = ["hvm"]
+    values = ["hvm"]
   }
 }
 
