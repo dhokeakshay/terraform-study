@@ -8,3 +8,9 @@ variable "instance_name" {
   type        = string
   default     = "MyWirelessServer"
 }
+
+variable "s3_bucket" {
+  description = "Name of the s3 bucket"
+  type        = string
+  default     = "MyNewBucket"
+}
