@@ -23,7 +23,7 @@ resource "aws_s3_bucket_public_access_block" "my_s3_bucket" {
 
 resource "aws_s3_bucket_ownership_controls" "my_s3_bucket" {
   rule {
-    object_ownership = "OwnerPreferred"
+    object_ownership = "BucketOwnerPreferred"
   }
   bucket = var.s3_bucket
 }
