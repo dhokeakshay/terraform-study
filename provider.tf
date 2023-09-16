@@ -2,9 +2,9 @@ provider "aws" {
   region = "ap-southeast-1"
 }
 
-data "aws_ami" "linux" {
+data "aws_ami" "amazon_linux" {
   most_recent = true
-  owners      = ["self"]
+  owners      = ["137112412989"]
 
   filter{
     name = "AmiName"
@@ -22,5 +22,5 @@ data "aws_ami" "linux" {
 
 
 output "ami_id" {
-  value = data.aws_ami.linux.id
+  value = data.aws_ami.amazon_linux.id
 }
