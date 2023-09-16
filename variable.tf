@@ -4,6 +4,6 @@ provider "aws" {
 }
 
 data "aws_ami" "ami" {
-  type = string
+  types= string
   default = "ami-830c94e3"
 }
