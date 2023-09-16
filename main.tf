@@ -25,4 +25,5 @@ resource "aws_s3_bucket_ownership_controls" "my_s3_bucket" {
   rule {
     object_ownership = "OwnerPreferred"
   }
+  bucket = var.s3_bucket
 }
