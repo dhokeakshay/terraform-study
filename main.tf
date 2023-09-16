@@ -4,7 +4,8 @@ resource "aws_instance" "web_server" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "WebServerInstance"
+    Name = var.instance_name
   }
 }
+
 
