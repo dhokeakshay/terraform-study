@@ -6,15 +6,15 @@ data "aws_ami" "linux" {
   most_recent = true
   owners      = "137112412989"
 
-  filter {
+  filter{
     name = "AmiName"
     value = ["al2023-ami-2023.1.20230912.0-kernel-6.1-x86_64"]
   }
-  filter {
+  filter{
     name = "root-device-type"
     value = ["ebs"]
   }
-  filter {
+  filter{
     name = "virtualization-type"
     value = ["hvm"]
   }
