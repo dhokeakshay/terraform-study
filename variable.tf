@@ -1,7 +1,7 @@
 variable "instance_name" {
   description = "value of theName tag for the EC2 instance"
   type        = string
-  default     = "MyWirelessServer"
+  default     = "MyNewServer"
 }
 
 variable "s3_bucket" {
