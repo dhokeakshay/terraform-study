@@ -8,7 +8,7 @@ resource "aws_instance" "web_server" {
   }
 }
 resource "aws_ebs_volume" "ebs_volume" {
-  availability_zone = "ap-southeast-2a"
+  availability_zone = "ap-southeast-1b"
   size = 1
 }
 resource "aws_volume_attachment" "ebs_attached" {
