@@ -13,7 +13,7 @@ resource "aws_ebs_volume" "ebs_volume" {
 }
 resource "aws_volume_attachment" "ebs_attached" {
   device_name = "/dev/sdh"
-  volume_id = aws_volume_attachment.ebs_attached.id
+  volume_id = aws_ebs_volume.ebs_volume.id
   instance_id = aws_instance.web_server.id
 }
 #resource "aws_s3_bucket" "my_s3_bucket" {
