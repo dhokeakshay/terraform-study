@@ -1,11 +1,12 @@
 
 resource "aws_instance" "web_server" {
+  name = "myInstance"
   count = 3
   ami           = "ami-0b825ad86ddcfb907"
   instance_type = "t2.micro"
 
   tags = {
-    Name = var.instance_name[count.index]
+    Name = "web_server${count.index}"
   }
 }
 resource "aws_ebs_volume" "ebs_volume" {
