@@ -5,7 +5,7 @@ resource "aws_instance" "web_server" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = aws_instance.web_server[count.index]
+    Name = var.instance_name[count.index]
   }
 }
 resource "aws_ebs_volume" "ebs_volume" {
